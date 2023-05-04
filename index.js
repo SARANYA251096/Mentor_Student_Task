@@ -14,6 +14,10 @@ db();
 app.use(express.json());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("Welcome!!!");
+});
+
 // Define the schemas
 const mentorSchema = new mongoose.Schema({
   name: String,
